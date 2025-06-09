@@ -1,14 +1,14 @@
-import { Search } from "lucide-react";
 import Logo from "./shared/Logo";
+import { ModeToggle } from "@/components/mode-toggle";
+import SearchBar from "./shared/SearchBar";
 
 const Header = () => {
   return (
-    <nav className="flex h-[73px] items-center justify-center px-6">
+    <nav className="flex h-[73px] items-center justify-between px-6">
       <Logo />
-      <div className="flex items-center justify-center gap-4 w-[30%]">
-        <div className="relative">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-primary" />
-        </div>
+      <div className="flex items-center justify-between gap-4 lg:w-[30%]">
+        <SearchBar />
+        <ModeToggle />
       </div>
     </nav>
   );
